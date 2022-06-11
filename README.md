@@ -4,7 +4,7 @@
   - Demo : [link](https://tkadyear.github.io/iar-gestion)
 
 ## Clona este repositorio
-      ```bash
+```bash
 # Clona este repositorio
 $ git clone https://github.com/TKadyear/iar-gestion.git
 
