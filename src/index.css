@@ -16,6 +16,10 @@ code {
   width: 75%;
   margin: 5rem auto;
 }
+.main__container__options-clock{
+  display:flex;
+  justify-content: space-between;
+}
 select{
   background-color: white;
   border:0;

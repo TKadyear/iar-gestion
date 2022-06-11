@@ -7,10 +7,13 @@ const dataToSearch= dataRequired.map(value => value.key);
         <tr>{dataRequired.map((header, index) => <th key={index}>{header.display}</th>)}</tr>
       </thead>
       <tbody>
-        {data.length && data.map((person,index) => {
+     {data.length ?
+        data.map((person,index) => {
         return (<TableRow key={person.id + index} person={person} dataToDisplay={dataToSearch} />);
-        })}
+        })
+  :<tr><td>No hay datos</td></tr>}
     </tbody>
+
   </table>
   )
 }

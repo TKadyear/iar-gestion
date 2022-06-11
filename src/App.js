@@ -1,8 +1,8 @@
 import { Table } from './components/Table';
+import { Clock } from './components/Clock';
 import {useState,useEffect} from "react";
 function App() {
 const [data,setData] = useState([]);
-const [cities,setCities] = useState([]);
 const [countries,setCountries] = useState([]);
 const [continents,setContinents] = useState([]);
 
@@ -41,7 +41,6 @@ useEffect(()=> {
     });
     setData(newData);
     setCountries(res.countries);
-    setCities(res.cities);
     setContinents(res.continents);
   }).catch(() => setData([]));
 },[]);
@@ -61,12 +60,16 @@ useEffect(()=> {
   return (
     <div className="App">
       <main className="main__container">
+        <div className="main__container__options-clock">
+
       <select id="select_continent" value={sortContinent} onChange={(e)=> setSortContinent(e.target.value)}>
         <option disabled value="select">Selecciona un continente</option>
         {continents.map((continent,index) =>
         <option value={continent.continent_id} key={index+continent.continentName}>{continent.continentName}</option>)}
         <option value="ninguno">Ninguno</option>
-        </select>
+      </select>
+        <Clock/>
+        </div>
       <Table dataRequired={dataToDisplay} data={personToDisplay}/>
 
       </main>
