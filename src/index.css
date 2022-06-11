@@ -5,15 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: aliceblue;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-table {
+.main__container{
   width: 75%;
-  margin:5rem auto;
+  margin: 5rem auto;
+}
+select{
+  background-color: white;
+  border:0;
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+table {
+  margin: 1.25rem auto;
+  width:100%;
   background-color: white;
   border-radius: 12px;
   padding: 1rem;

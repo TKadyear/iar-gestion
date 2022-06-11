@@ -2,6 +2,9 @@ import { Table } from './components/Table';
 import {useState,useEffect} from "react";
 function App() {
 const [data,setData] = useState([]);
+const [cities,setCities] = useState([]);
+const [countries,setCountries] = useState([]);
+const [continents,setContinents] = useState([]);
 
 const dataToDisplay = [
   {key: "name", display: "Nombre"},
@@ -28,6 +31,7 @@ useEffect(()=> {
         ...person,
         id :person.person_id,
         city: requiredCity.cityName,
+        country_id: requiredCountry.country_id,
         country: requiredCountry.countryName,
         studies: requiredStudies ? requiredStudies.level :"-----",
         gender: requiredGender.type,
@@ -35,12 +39,36 @@ useEffect(()=> {
       };
     });
     setData(newData);
+    setCountries(res.countries);
+    setCities(res.cities);
+    setContinents(res.continents);
   }).catch(() => setData([]));
 },[]);
-
+const [personToDisplay,setPersonToDisplay] = useState([]);
+const [sortContinent,setSortContinent] = useState("select");
+useEffect(()=> {
+  if(sortContinent && sortContinent != "select" && sortContinent != "ninguno" ){
+    const newList = data.filter(p => {
+    const personCountry = [...countries].find(country => country.country_id === p.country_id);
+    return personCountry.continent_id === sortContinent;
+    });
+    setPersonToDisplay(newList.length ?newList :data);
+  }else{
+    setPersonToDisplay(data);
+  }
+}, [data,sortContinent,countries])
   return (
     <div className="App">
-      <Table dataRequired={dataToDisplay} data={data}/>
+      <main className="main__container">
+      <select id="select_continent" value={sortContinent} onChange={(e)=> setSortContinent(e.target.value)}>
+        <option disabled value="select">Selecciona un continente</option>
+        {continents.map((continent,index) =>
+        <option value={continent.continent_id} key={index+continent.continentName}>{continent.continentName}</option>)}
+        <option value="ninguno">Ninguno</option>
+        </select>
+      <Table dataRequired={dataToDisplay} data={personToDisplay}/>
+
+      </main>
     </div>
   );
 }
