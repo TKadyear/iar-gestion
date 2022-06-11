@@ -13,6 +13,7 @@ const dataToDisplay = [
   {key: "height", display: "Altura"},
   {key: "weight", display: "Peso"},
   {key: "city", display: "Ciudad"},
+  {key: "country", display: "País"},
   {key: "studies", display: "Estudios"},
   {key: "gender", display: "Género"},
   {key: "bloodtype", display: "Grupo sanguíneo"}
