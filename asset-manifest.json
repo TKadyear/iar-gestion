@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/iar-gestion/static/css/main.1e0948e4.css",
+    "main.js": "/iar-gestion/static/js/main.bf217f35.js",
+    "static/js/787.369d5130.chunk.js": "/iar-gestion/static/js/787.369d5130.chunk.js",
+    "index.html": "/iar-gestion/index.html",
+    "main.1e0948e4.css.map": "/iar-gestion/static/css/main.1e0948e4.css.map",
+    "main.bf217f35.js.map": "/iar-gestion/static/js/main.bf217f35.js.map",
+    "787.369d5130.chunk.js.map": "/iar-gestion/static/js/787.369d5130.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e0948e4.css",
+    "static/js/main.bf217f35.js"
+  ]
+}
