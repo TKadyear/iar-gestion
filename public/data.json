@@ -17,7 +17,7 @@
 "surname1": "Martínez",
 "age": 40,
 "height": 165,
-"Weight": 55,
+"weight": 55,
 "city_id": "2",
 "study_id": null,
 "gender_id": "2",
@@ -89,19 +89,24 @@
 ],
 "countries": [{
 "country_id": "1",
-"countryName": "España"
+"countryName": "España",
+"continent_id": "1"
 },
 {
 "country_id": "2",
-"countryName": "Francia"
+"countryName": "Francia",
+"continent_id": "1"
 },
 {
 "country_id": "3",
-"countryName": "Colombia"
+"countryName": "Colombia",
+"continent_id": "2"
+
 },
 {
 "country_id": "4",
-"countryName": "Japón"
+"countryName": "Japón",
+"continent_id": "3"
 }
 ],
 "studies": [{
@@ -138,6 +143,20 @@
 {
 "bloodType_id": "4",
 "bloodName": "0"
+}
+],
+"continents":[
+{
+"continentName": "Europa",
+"continent_id": "1"
+},
+{
+"continentName": "America del Sur",
+"continent_id": "2"
+},
+{
+"continentName": "Asia",
+"continent_id": "3"
 }
 ]
 }
