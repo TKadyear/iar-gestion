@@ -2,9 +2,10 @@ import { Table } from './components/Table';
 import { Clock } from './components/Clock';
 import React,{ useState, useEffect } from "react";
 
-export const CountriesContext = React.createContext();
+export const CitiesContext = React.createContext();
 function App() {
 const [data,setData] = useState([]);
+const [cities,setCities] = useState([]);
 const [countries,setCountries] = useState([]);
 const [continents,setContinents] = useState([]);
 
@@ -42,6 +43,7 @@ useEffect(()=> {
       };
     });
     setData(newData);
+    setCities(res.cities);
     setCountries(res.countries);
     setContinents(res.continents);
   }).catch(() => setData([]));
@@ -60,7 +62,7 @@ useEffect(()=> {
   }
 }, [data,sortContinent,countries])
   return (
-    <CountriesContext.Provider value={countries}>
+    <CitiesContext.Provider value={cities}>
     <div className="App">
       <main className="main__container">
         <div className="main__container__options-clock">
@@ -77,7 +79,7 @@ useEffect(()=> {
 
       </main>
     </div>
-    </CountriesContext.Provider>
+    </CitiesContext.Provider>
   );
 }
 

@@ -64,52 +64,53 @@
 "cities": [{
 "city_id": "1",
 "cityName": "Pamplona",
-"country_id": "1"
+"country_id": "1",
+"timeZone":"Europe/Madrid"
 },
 {
 "city_id": "2",
 "cityName": "Santa Cruz de Tenerife",
-"country_id": "1"
+"country_id": "1",
+"timeZone":"Asia/Tokyo"
 },
 {
-"city_id": "3",
-"cityName": "Tokyo",
-"country_id": "4"
+  "city_id": "3",
+  "cityName": "Tokyo",
+  "country_id": "4",
+  "timeZone":"Asia/Tokyo"
 },
 {
-"city_id": "4",
-"cityName": "Bogotá",
-"country_id": "3"
+  "city_id": "4",
+  "cityName": "Bogotá",
+  "country_id": "3",
+  "timeZone":"Asia/Tokyo"
 },
 {
-"city_id": "5",
-"cityName": "Burdeos",
-"country_id": "2"
+  "city_id": "5",
+  "cityName": "Burdeos",
+  "country_id": "2",
+  "timeZone":"Europe/Paris"
 }
 ],
 "countries": [{
 "country_id": "1",
 "countryName": "España",
-"continent_id": "1",
-"timeZone":"es-ES"
+"continent_id": "1"
 },
 {
 "country_id": "2",
 "countryName": "Francia",
-"continent_id": "1",
-"timeZone":"fr-FR"
+"continent_id": "1"
 },
 {
 "country_id": "3",
 "countryName": "Colombia",
-"continent_id": "2",
-"timeZone":"es-CO"
+"continent_id": "2"
 },
 {
   "country_id": "4",
   "countryName": "Japón",
-  "continent_id": "3",
-  "timeZone":"ja-JP"
+  "continent_id": "3"
 }
 ],
 "studies": [{

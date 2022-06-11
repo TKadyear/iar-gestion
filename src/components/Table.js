@@ -24,7 +24,7 @@ const TableRow = ({ person ,dataToDisplay}) => (
       {data === "country"
       ? (<>
       <a href={`https://www.google.es/maps?q=${person[data]}}`}>{person[data]}</a>
-      <Clock country_id={person.country_id}/>
+      <Clock city_id={person.city_id}/>
       </>)
       : person[data]
     }</td> )

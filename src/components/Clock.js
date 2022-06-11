@@ -1,15 +1,14 @@
 import { useEffect,useState, useContext} from "react";
-import { CountriesContext } from "../App";
-
-export const Clock = ({ country_id })=> {
+import { CitiesContext } from "../App";
+export const Clock = ({ city_id })=> {
   const [hour,setHour]= useState(new Date());
-  const countries = useContext(CountriesContext);
+  const cities = useContext(CitiesContext);
   const getTimeZone=() => {
-    if(country_id){
-    const { timeZone }= [...countries].find(c => c.country_id === country_id);
-    return timeZone;
+    if(city_id){
+      const { timeZone }= [...cities].find(c => c.city_id === city_id);
+      return timeZone;
     }else{
-      return "en-US";
+      return "UTC";
     }
   };
   useEffect(()=>{
@@ -19,6 +18,6 @@ export const Clock = ({ country_id })=> {
     return () => clearInterval(clock);
   },[])
   return(
-    <p>{hour.toLocaleTimeString(getTimeZone(), {timeZone: "UTC", hour12: false})}</p>
+    <p>{hour.toLocaleTimeString("es-ES", {timeZone: getTimeZone(), hour12: false})}</p>
   )
 };
