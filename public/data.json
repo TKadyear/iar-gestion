@@ -90,23 +90,26 @@
 "countries": [{
 "country_id": "1",
 "countryName": "España",
-"continent_id": "1"
+"continent_id": "1",
+"timeZone":"es-ES"
 },
 {
 "country_id": "2",
 "countryName": "Francia",
-"continent_id": "1"
+"continent_id": "1",
+"timeZone":"fr-FR"
 },
 {
 "country_id": "3",
 "countryName": "Colombia",
-"continent_id": "2"
-
+"continent_id": "2",
+"timeZone":"es-CO"
 },
 {
-"country_id": "4",
-"countryName": "Japón",
-"continent_id": "3"
+  "country_id": "4",
+  "countryName": "Japón",
+  "continent_id": "3",
+  "timeZone":"ja-JP"
 }
 ],
 "studies": [{

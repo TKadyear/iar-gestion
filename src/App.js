@@ -1,6 +1,8 @@
 import { Table } from './components/Table';
 import { Clock } from './components/Clock';
-import {useState,useEffect} from "react";
+import React,{ useState, useEffect } from "react";
+
+export const CountriesContext = React.createContext();
 function App() {
 const [data,setData] = useState([]);
 const [countries,setCountries] = useState([]);
@@ -58,6 +60,7 @@ useEffect(()=> {
   }
 }, [data,sortContinent,countries])
   return (
+    <CountriesContext.Provider value={countries}>
     <div className="App">
       <main className="main__container">
         <div className="main__container__options-clock">
@@ -74,6 +77,7 @@ useEffect(()=> {
 
       </main>
     </div>
+    </CountriesContext.Provider>
   );
 }
 
