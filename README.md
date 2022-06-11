@@ -1,20 +1,9 @@
-
 # iar-gestion
-## Índice
-  - [iar-gestion](#iar-gestion)
-  - [Overview](#overview)
-  - [Links](#links)
-  - [Tecnologías](#tecnologías)
-  - [Clona este repositorio](#clona - este - repositorio)
-  - [Autora](#autora)
-## Overview
-![]()
-
-### Links
+## Links
 
   - Demo : []()
 
-### Clona este repositorio
+## Clona este repositorio
       ```bash
 # Clona este repositorio
 $ git clone https://github.com/TKadyear/iar-gestion.git
